@@ -1,7 +1,7 @@
 ;;; nethack.el -- run Nethack as an inferior process in Emacs
 ;;; Author: Ryan Yeske (rcyeske@vcn.bc.ca)
 ;;; Date: Sat Mar 18 11:31:52 2000
-;;; $Id: nethack.el,v 1.48 2001/12/19 12:50:00 sabetts Exp $
+;;; $Id: nethack.el,v 1.49 2001/12/20 11:28:53 sabetts Exp $
 ;;; Requires: a copy of Nethack 3.3.x with the lisp window port
 
 ;;; Commentary:
@@ -244,6 +244,7 @@ PROC is the process object and MSG is the exit message."
   (if (buffer-name (process-buffer proc))
       (save-excursion
 	(set-buffer (process-buffer proc))
+	(eval-region comint-last-input-end (point))
 	(goto-char (point-max))
 	(insert ?\n "Nethack " msg)))
   (delete-process proc))
