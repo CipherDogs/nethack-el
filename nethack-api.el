@@ -1,6 +1,6 @@
 ;;; nethack-api.el -- low level Emacs interface the lisp window-port
 ;;; of Nethack-3.3.x
-;;; $Id: nethack-api.el,v 1.43 2001/10/23 05:29:21 rcyeske Exp $
+;;; $Id: nethack-api.el,v 1.44 2001/10/23 09:16:04 sabetts Exp $
 
 ;;; originally a machine translation of nethack-3.3.0/doc/window.doc
 ;;; from the nethack src package.
@@ -366,7 +366,7 @@ are no newlines in `nethack-status-string'."
 
 (defun nethack-api-getlin (ques)
   "" 
-  (nethack-return
+  (nethack-process-send-string
    (read-from-minibuffer (concat ques " "))))
 
 
