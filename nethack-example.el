@@ -1,9 +1,9 @@
 ;;; nethack-example.el --- Sample configurations for nethack-el
 
-;; Copyright (C) 2002  Shawn Betts and Ryan Yeske
+;; Copyright (C) 2002,2003,2005  Shawn Betts and Ryan Yeske
 
 ;; Author: Shawn Betts <sabetts@vcn.bc.ca>
-;; Version: $Id: nethack-example.el,v 1.5 2004/11/19 23:05:39 sabetts Exp $
+;; Version: $Id: nethack-example.el,v 1.6 2005/05/07 20:20:10 sabetts Exp $
 ;; Keywords: games
 
 ;; This file is free software; you can redistribute it and/or modify
@@ -62,7 +62,7 @@ Add the following to your ~/.emacs
 			       (" holy " . nethack-green-face)
 			       (" cursed " . nethack-red-face)
 			       (" unholy " . nethack-green-face)
-			       (" cursed .* (being worn)" . nethack-orange-face)))
+			       (" cursed .* (being worn)" . nethack-orange-face))
   "An assoc of regexps and font colors")
 
 (defun nethack-x-highlight-option ()
